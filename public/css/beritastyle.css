@@ -1,0 +1,252 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif !important;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #dcfdf1;
+}
+
+/* Navbar */
+.fs-6 {
+    font-size: 1rem !important;
+}
+
+.nav-link.btn-warning {
+    background-color: #ffc107;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-right: 20px;
+}
+
+.nav-link.btn-warning:hover {
+    background-color: #f4dc00;
+    color: #212529;
+}
+
+.navbar {
+    padding-left: 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1030;
+    background-color: #00583a !important;
+}
+
+.navbar .nav-link {
+    color: white;
+    font-weight: 500 !important;
+    font-size: 1rem !important;
+}
+
+.navbar .nav-item.dropdown > a.nav-link {
+    font-weight: 700 !important;
+}
+
+.navbar .nav-link:hover {
+    color: #f4dc00;
+    text-decoration: none;
+}
+
+.nav-link.active {
+    color: #f4dc00 !important;
+}
+.dropdown-item.active,
+.dropdown-item:active {
+    background-color: #f4dc00 !important;
+    color: #fff !important;
+}
+
+.custom-dropdown {
+    background-color: #00583a !important;
+}
+.custom-dropdown .dropdown-item {
+    color: white !important;
+}
+.custom-dropdown .dropdown-item:hover {
+    background-color: #00472e !important;
+}
+
+/* Berita Section */
+.container {
+    margin-top: 100px;
+}
+.berita-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+h2 {
+    font-size: 24px;
+    color: #006641;
+}
+
+.card-body {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.card-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #006641;
+}
+
+.text-muted {
+    font-size: 14px;
+}
+
+.text-success {
+    color: #006641;
+}
+
+.hr-responsive {
+    border: 2px solid #00583a;
+    width: 80%;
+    margin: auto;
+    max-width: 100%;
+}
+
+.card img {
+    max-height: 200px;
+    object-fit: cover;
+}
+
+.card-img-top {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.card-body .btn-primary {
+    background-color: #006641;
+    border: none;
+}
+
+.card-body .btn-primary:hover {
+    background-color: #004d2c;
+}
+
+.d-flex.align-items-center i {
+    color: #006641;
+}
+
+.d-flex.align-items-center span {
+    color: #999;
+}
+
+.pagination {
+    justify-content: center;
+}
+
+.pagination .page-link {
+    background-color: #006641;
+    color: white;
+    border: none;
+}
+
+.pagination .page-link:hover {
+    background-color: #004d2c;
+    color: white;
+}
+
+.kembali-btn {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    text-align: center;
+    width: fit-content;
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+}
+
+.social-icon:hover {
+    background-color: #fff;
+}
+
+/* Footer */
+footer {
+    background-color: #fff;
+    padding: 40px 0;
+    text-align: center;
+}
+
+footer .row {
+    margin-bottom: 20px;
+}
+
+footer .col-md-3 img {
+    max-width: 120px;
+}
+
+footer .col-md-3 p {
+    font-size: 14px;
+    color: #666;
+}
+
+footer .col-md-2 ul {
+    list-style-type: none;
+}
+
+footer .col-md-2 ul li {
+    margin-bottom: 8px;
+}
+
+footer .col-md-2 ul li a {
+    color: #006641;
+    text-decoration: none;
+}
+
+footer .col-md-2 ul li a:hover {
+    color: #004d2c;
+}
+
+footer hr {
+    border-top: 1px solid #666;
+}
+
+footer .text-muted {
+    font-size: 12px;
+    color: #666;
+}
+
+footer .text-muted a {
+    color: #006641;
+    text-decoration: none;
+}
+
+footer .text-muted a:hover {
+    color: #004d2c;
+}
+
+@media (max-width: 768px) {
+    .hr-responsive {
+        width: 90%;
+    }
+    .berita-img {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .hr-responsive {
+        width: 95%;
+    }
+}
