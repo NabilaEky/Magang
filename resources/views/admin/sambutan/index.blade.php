@@ -127,36 +127,30 @@
 
     <div class="container mt-5 pt-4">
         <div class="card shadow">
-            <div class="card-header text-white text-center d-flex align-items-center justify-content-center"
-                style="background-color: #00583A;">
-                <h4 class="m-0">Data Sambutan</h4>
+            <div class="card-header text-white text-center" style="background-color: #00583A;">
+                <h5 class="m-0">Sambutan</h5>
             </div>
-
-            @if ($sambutan)
-                <div class="card shadow mx-auto" style="max-width: 800px;">
-                    <div class="card-body p-4 text-center">
-                        <h3 class="fw-bold">{{ $sambutan->nama_kepala }}</h3>
-                        <div class="my-3">
-                            @if(isset($sambutan->foto_kepala))
-                                <img src="{{ optional($sambutan)->foto_kepala ? asset('storage/' . $sambutan->foto_kepala) : 'https://via.placeholder.com/150' }}"
-                                    alt="Foto Kepala Sekolah" class="custom-rounded">
-                            @else
-                                <img src="https://via.placeholder.com/150" class="custom-rounded" id="previewImg">
-                            @endif
-                        </div>
-                        <p>{{ $sambutan->sambutan }}</p>
-                        <div class="mt-4 d-flex justify-content-center gap-2">
-                            <a href="{{ route('admin.home') }}" class="btn text-white fw-bold"
-                                style="background-color: #F40000;">
-                                <i class="bi bi-arrow-left-circle"></i> Kembali
-                            </a>
-                            <a href="{{ route('admin.sambutan.edit', $sambutan->id) }}" class="btn text-dark fw-bold"
-                                style="background-color: #F4DC00;">
-                                <i class="bi bi-pencil-square"></i> Edit
-                            </a>
-                        </div>
+            <div class="card-body text-center">
+                @if ($sambutan)
+                    <h3 class="fw-bold">{{ $sambutan->nama_kepala }}</h3>
+                    <div class="my-3">
+                        <img src="{{ optional($sambutan)->foto_kepala ? asset('storage/' . $sambutan->foto_kepala) : 'https://via.placeholder.com/150' }}" 
+                            alt="Foto Kepala Sekolah" class="custom-rounded">
                     </div>
-                </div>
-            @endif
+                    <p>{{ $sambutan->sambutan }}</p>
+                    <div class="mt-4 d-flex justify-content-center gap-2">
+                        <a href="{{ route('admin.home') }}" class="btn text-white fw-bold" style="background-color: #F40000;">
+                            <i class="bi bi-arrow-left-circle"></i> Kembali
+                        </a>
+                        <a href="{{ route('admin.sambutan.edit', $sambutan->id) }}" class="btn text-dark fw-bold" style="background-color: #F4DC00;">
+                            <i class="bi bi-pencil-square"></i> Edit
+                        </a>
+                    </div>
+                @else
+                    <p class="text-muted">Belum ada sambutan yang tersedia.</p>
+                @endif
+            </div>
         </div>
-@endsection
+    </div>
+    @endsection
+    
